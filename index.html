@@ -1,37 +1,69 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    </head>
-    <body class="bg-slate-300">
-        <div class="container ">
-           <div class="h-screen flex justify-center my-8">
-                <div class="max-w-[189px] text-center mb-4 ">
-                    <p class="text-xl leading-loose font-medium ">Катер Meridian 401</p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              padding: "2rem",
+            },
+            colors: {
+              primary: {
+                DEFAULT: "rgb(22,48,82)",
+                200: "rgb(40,60,84)",
+              },
+              secondary: "rgb(0,198,189)",
+            },
+            fontFamily: {
+              "noto-sans": ["Noto Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-noto-sans text-primary">
+    <div class="container">
+      <div class="h-screen w-full flex items-center justify-center">
+        <div class="max-w-[370px] p-8 space-y-6 shadow-lg text-primary-200">
+          <h2 class="text-center text-xl font-medium">Катер Meridian 401</h2>
 
-                    <div class="h-36 w-80 mt-4">
-                        <img src="https://i.pinimg.com/564x/ad/b5/e2/adb5e2594df01915f34a4e5bd65b16b4.jpg" alt="" class="object-cover h-full w-full">
-                    </div>
-                    <div class="h-12 w-80 mt-4">
-                        <p class="text-left">Яхта 401 длиной 12.5 метров и шириной 4.2 метра, вместимостью 11 человек</p>
-                    </div>
-                    <div class="mt-4 w-57 h-28">
-                        <ul class="myList text-left list-disc pl-4 w-full h-full"></ul>
-                    </div>
-                    <div class="mt-8 text-xl flex ">
-                        <p class="w-12 h-6">Цена:</p>
-                        <p class="ml-auto text-2xl">14 000 ₽/час</p>
-                    </div>
-                </div>  
-           </div>
+          <div class="w-full h-[141px]">
+            <img
+              src="https://i.pinimg.com/564x/ad/b5/e2/adb5e2594df01915f34a4e5bd65b16b4.jpg"
+              alt=""
+              class="w-full h-full object-cover" />
+          </div>
+
+          <p class="text-sm">
+            Яхта 401 длиной 12.5 метров и шириной 4.2 метра, вместимостью 11
+            человек
+          </p>
+
+          <ul
+            data-list
+            role="list"
+            class="list-disc marker:text-secondary marker:text-lg marker:font-bold pl-2 ml-1 text-sm"></ul>
+
+          <div class="flex items-center justify-between text-lg font-medium">
+            <span>Цена</span>
+            <span>14 000 ₽/час</span>
+          </div>
         </div>
-        <script src="fonction.js"></script>
-    </body>
+      </div>
+    </div>
+    <script src="fonction.js"></script>
+  </body>
 </html>
-
-
-
-
